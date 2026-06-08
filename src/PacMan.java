@@ -156,6 +156,7 @@ class PacMan extends JPanel implements ActionListener, KeyListener{
            char newDirection = directions[random.nextInt(4)];
            ghost.updateDirection(newDirection);
 
+           
         }
         gameLoop = new javax.swing.Timer(35,this);
         gameLoop.start();
