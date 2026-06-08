@@ -4,8 +4,8 @@ import javax.swing.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        int rowCount = 19;
-        int columnCount = 21;
+        int rowCount = 21;
+        int columnCount = 19;
         int tileSize = 32;
         int boardWidth = columnCount * tileSize;
         int boardHeight = rowCount * tileSize;
@@ -18,6 +18,7 @@ public class App {
        
 
         PacMan pacmanGame = new PacMan();
+        pacmanGame.requestFocus();
         frame.add(pacmanGame);
         frame.pack();
         frame.setVisible(true);
