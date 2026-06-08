@@ -157,7 +157,7 @@ class PacMan extends JPanel implements ActionListener, KeyListener{
            ghost.updateDirection(newDirection);
 
         }
-        gameLoop = new javax.swing.Timer(50,this);
+        gameLoop = new javax.swing.Timer(35,this);
         gameLoop.start();
         
     }
@@ -240,6 +240,12 @@ class PacMan extends JPanel implements ActionListener, KeyListener{
         pacman.x += pacman.velocityX;
         pacman.y += pacman.velocityY;
 
+        if(pacman.x<0){
+            pacman.x = boardWidth;
+        }
+        if(pacman.x>boardWidth){
+            pacman.x = 0;
+        }
         for(Block wall: walls){
             if(collision(pacman, wall)){
                 pacman.x -= pacman.velocityX;
