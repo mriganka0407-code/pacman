@@ -330,11 +330,6 @@ class PacMan extends JPanel implements ActionListener, KeyListener{
 
    
     public void keyPressed(KeyEvent e){
-        
-    }
-
-    public void keyReleased(KeyEvent e){
-
         if(gameOver){
             loadMap();
             reset();
@@ -360,19 +355,10 @@ class PacMan extends JPanel implements ActionListener, KeyListener{
             pacman.updateDirection('R');
             pacman.image = pacmanRightImage;
         }
+    }
 
-        if(pacman.direction == 'U'){
-            pacman.image = pacmanUpImage;
-        }
-        else if(pacman.direction == 'D'){
-            pacman.image = pacmanDownImage;
-        }
-        else if(pacman.direction == 'L'){
-            pacman.image = pacmanLeftImage;
-        }
-        else if(pacman.direction == 'R'){
-            pacman.image = pacmanRightImage;
-        }
+    public void keyReleased(KeyEvent e){
+        
     }
 
     public void keyTyped(KeyEvent e){
